@@ -1,9 +1,8 @@
 import requests
-import os
 
 def get_weather(city):
     # Step 1: Try environment variable
-    api_key = os.getenv("OPENWEATHER_API_KEY")
+    api_key = "OPENWEATHER_API_KEY"
 
     # Step 2: If missing, ask user to paste it
     if not api_key:
@@ -40,3 +39,4 @@ def get_weather(city):
 if __name__ == "__main__":
     city_name = input("Enter city name: ")
     get_weather(city_name)
+
